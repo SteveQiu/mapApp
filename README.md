@@ -26,43 +26,39 @@ http://ios-class-for-beginner.esy.es/
 > 0-4. Fill <sup>Product name</sup> and then tap <sup>Next</sup>  
 > 0-5. Select the place for saving your project and then tap <sup>Create</sup>  
 
-## 1, Collect resource
-
-> 1-1. Add a MKMapView to your View Controller
-<details>
-<summary>View Gif</summary>
-<div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /></div>
-</details>
-・<a href="http://www.flaticon.com/free-icon/microphone_444308#term=microphone&page=1&position=65">Microphone icon</a>
-
-## 2, Design your app
+## 1, Design your app
 #### 🗂 Main.storyboard
 
-> 2-1. Drap & Drop "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-1.gif" /></div></details>
+> 2-1. Add a <code>MKMapView</code> to your View Controller
+<details>
+  <summary>View Gif</summary>
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
+</details>
 
-> 2-2. Resize "UITextView". After that, set "Autoresizing" for adjusting frame depending on devices
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-2.gif" /></div></details>
+> 2-2. Add a <code>UISegmentControl</code> to your View Controller
+<details>
+  <summary>View Gif</summary>
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
+</details>
 
-> 2-3. Replace text of "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-3.gif" /></div></details>
-
-> 2-4. Drap & Drop "UIButton"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-1.gif" /></div></details>
-
-> 2-5. Set "UIButton" image
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-2.gif" /></div></details>
-
-> 2-6. Resize "UIButton". Set "Autoresizing"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-3.gif" /></div></details>
+> 2-3. Apply autoresizing for map and segment control
+<details>
+  <summary>View Gif</summary>
+  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
+</details>
 
 
-## 3, Connect UI components to the ViewController
+## 2, Connect UI components to the ViewController
 #### 🗂 Main.storyboard → ViewController.swift  
   ★  control + drag in storyboard to create a control segue
   
-> 3-1. Connect "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" /></div></details>
+> 3-1. Connect "MKMapView"
+> <details>
+  <summary>View Gif</summary>
+  <div style="text-align:center">
+    <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
+  </div>
+ </details>
 
 > 3-2. Add action of "UIButton"
 > <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" /></div></details>
