@@ -36,7 +36,7 @@ http://ios-class-for-beginner.esy.es/
 > </details>
 
 > 2-2. Add a <code>UISegmentControl</code> to your View Controller
-> <details style="cursor:pointer">
+> <details>
 >   <summary>View Gif</summary>
 >   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
 > </details>
@@ -75,27 +75,78 @@ http://ios-class-for-beginner.esy.es/
 
 ```Swift  
 import UIKit
-import AVFoundation     // Import AVFoundation to access speech fearure
+import MapKit           // Import MapKit to modify your MKMapKit
+import CoreLocation     // Import CoreLocation to access GPS
 
-class ViewController: UIViewController
-{
-    @IBOutlet var txtv: UITextView!
-    var synthesizer = AVSpeechSynthesizer()
+class ViewController: UIViewController {
 
+    @IBOutlet weak var map: MKMapView!
+    
+    let locationManager = CLLocationManager()
+    var isCentered = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()             // Required in order to access GPS coordinates
+        
+    }
+    
+    func centerMapOnLocation(coordinate: CLLocationCoordinate2D) {
+    
+        let latDelta:CLLocationDegrees = 0.01
+        let lonDelta:CLLocationDegrees = 0.01
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+        self.map.setRegion(region, animated: true)
+        
+    }
+    
+    @IBAction func mapTypeChanged(sender: UISegmentedControl) {
+    
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            map.mapType = MKMapType.standard
+        case 1:
+            map.mapType = MKMapType.hybrid
+        case 2:
+            map.mapType = MKMapType.satellite
+        default: break
+        }
+        
     }
 
-    @IBAction func tappedSpeech(_ sender: Any)
-    {
-        // Create contents
-        let contents = AVSpeechUtterance(string: txtv.text ?? "")
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
 
-        // Set language
-        contents.voice = AVSpeechSynthesisVoice(language: "en-US")
 
-        // Speak
-        synthesizer.speak(contents)
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if !isCentered {
+            self.centerMapOnLocation(coordinate: locations.first!.coordinate)
+            isCentered = true
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            map.showsUserLocation = true
+        default: 
+            locationManager.stopUpdatingLocation()
+            map.showsUserLocation = false
+        }
     }
 }
 ```
