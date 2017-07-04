@@ -42,10 +42,10 @@ http://ios-class-for-beginner.esy.es/
 > </details>
 
 > 2-3. Apply autoresizing for map and segment control
-<details>
-  <summary>View Gif</summary>
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
-</details>
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
 
 
 ## 2, Connect UI components to the ViewController
@@ -53,14 +53,20 @@ http://ios-class-for-beginner.esy.es/
   ★  control + drag in storyboard to create a control segue
   
 > 3-1. Connect "MKMapView"
-<details>
-  <summary>View Gif</summary>
-  <div style="text-align:center">
-    <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
-  </div>
- </details>
-> 3-2. Add action of "UIButton"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" /></div></details>
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center">
+>     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
+>   </div>
+>  </details>
+
+> 3-2. Connect "UISegmentControl"
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center">
+>     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" />
+>   </div>
+> </details>
 
 
 ## 4, Add code blocks in ViewController.swift
