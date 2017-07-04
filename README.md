@@ -22,9 +22,9 @@ http://ios-class-for-beginner.esy.es/
 
 > 0-1. Open Xcode  
 > 0-2. Select <sup>Create a new Xcode project</sup> or Go to <code>File</code> → <code>New</code> → <code>Project...</code>  
-> 0-3. Select <sup>Single View Application</sup> and then tap "Next"  
+> 0-3. Select <sup>Single View Application</sup> and then tap <sup>Next</sup>  
 > 0-4. Fill <sup>Product name</sup> and then tap <sup>Next</sup>  
-> 0-5. Select the place for saving your project and then tap "Create"  
+> 0-5. Select the place for saving your project and then tap <sup>Create</sup>  
 
 ## 1, Collect resource
 
