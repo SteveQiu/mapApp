@@ -30,15 +30,17 @@ http://ios-class-for-beginner.esy.es/
 #### 🗂 Main.storyboard
 
 > 2-1. Add a <code>MKMapView</code> to your View Controller
-<details>
-  <summary>View Gif</summary>
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
-</details>
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
+
 > 2-2. Add a <code>UISegmentControl</code> to your View Controller
-<details>
-  <summary>View Gif</summary>
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
-</details>
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
+
 > 2-3. Apply autoresizing for map and segment control
 <details>
   <summary>View Gif</summary>
