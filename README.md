@@ -30,17 +30,17 @@ http://ios-class-for-beginner.esy.es/
 #### 🗂 Main.storyboard
 
 > 2-1. Add a <code>MKMapView</code> to your View Controller
-> <details>
+<details>
   <summary>View Gif</summary>
   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
 </details>
 > 2-2. Add a <code>UISegmentControl</code> to your View Controller
-> <details>
+<details>
   <summary>View Gif</summary>
   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
 </details>
 > 2-3. Apply autoresizing for map and segment control
-> <details>
+<details>
   <summary>View Gif</summary>
   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" />     </div>
 </details>
@@ -51,7 +51,7 @@ http://ios-class-for-beginner.esy.es/
   ★  control + drag in storyboard to create a control segue
   
 > 3-1. Connect "MKMapView"
-> <details>
+<details>
   <summary>View Gif</summary>
   <div style="text-align:center">
     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
