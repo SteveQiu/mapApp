@@ -1,6 +1,7 @@
 # Code Together: Let's make iPhone app in an hour
 
-  <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/mapApp/preview.PNG" width="50%" height="50%"/></div>  
+  <div style="text-align:center;margin-left:25%">
+    <img src="https://github.com/iosClassForBeginner/mapApp/blob/master/preview.PNG?raw=true" width="50%" height="50%"/>       </div>  
 
   Thank you for visiting our account. We are going to make a map app in an hour. If would you like to study yourself before hands-on, or review what you have learned in the session, please use the following material.
 
@@ -20,52 +21,54 @@ http://ios-class-for-beginner.esy.es/
 # Full procedure
 ## 0, Create your project
 
-> 0-1. Open Xcode  
-> 0-2. Select <sup>Create a new Xcode project</sup> or Go to <code>File</code> → <code>New</code> → <code>Project...</code>.
-> 0-3. Select "Single View Application" and then tap "Next"  
-> 0-4. Fill "Product name" and then tap "Next"  
-> 0-5. Select the place for saving your project and then tap "Create"  
+> 0-1. Open Xcode
+> 0-2. Select <sup>Create a new Xcode project</sup> or Go to <code>File</code> → <code>New</code> → <code>Project...</code>  
+> 0-3. Select <sup>Single View Application</sup> and then tap <sup>Next</sup>  
+> 0-4. Fill <sup>Product name</sup> and then tap <sup>Next</sup>  
+> 0-5. Select the place for saving your project and then tap <sup>Create</sup>  
 
-## 1, Collect resource
-
-> 1-1. Add a MKMapView to your View Controller
-<details>
-<summary>View Gif</summary>
-<div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /></div>
-</details>
-・<a href="http://www.flaticon.com/free-icon/microphone_444308#term=microphone&page=1&position=65">Microphone icon</a>
-
-## 2, Design your app
+## 1, Design your app
 #### 🗂 Main.storyboard
 
-> 2-1. Drap & Drop "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-1.gif" /></div></details>
+> 2-1. Add a <code>MKMapView</code> to your View Controller
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
 
-> 2-2. Resize "UITextView". After that, set "Autoresizing" for adjusting frame depending on devices
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-2.gif" /></div></details>
+> 2-2. Add a <code>UISegmentControl</code> to your View Controller
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
 
-> 2-3. Replace text of "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/1-3.gif" /></div></details>
-
-> 2-4. Drap & Drop "UIButton"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-1.gif" /></div></details>
-
-> 2-5. Set "UIButton" image
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-2.gif" /></div></details>
-
-> 2-6. Resize "UIButton". Set "Autoresizing"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/2-3.gif" /></div></details>
+> 2-3. Apply autoresizing for map and segment control
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+> </details>
 
 
-## 3, Connect UI components to the ViewController
+## 2, Connect UI components to the ViewController
 #### 🗂 Main.storyboard → ViewController.swift  
   ★  control + drag in storyboard to create a control segue
   
-> 3-1. Connect "UITextView"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" /></div></details>
+> 3-1. Connect "MKMapView"
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center">
+>     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
+>   </div>
+>  </details>
 
-> 3-2. Add action of "UIButton"
-> <details><summary>View Gif</summary><div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" /></div></details>
+> 3-2. Connect "UISegmentControl"
+> <details>
+>   <summary>View Gif</summary>
+>   <div style="text-align:center">
+>     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" />
+>   </div>
+> </details>
+
 
 ## 4, Add code blocks in ViewController.swift
 #### 🗂 ViewController.swift  
@@ -73,27 +76,78 @@ http://ios-class-for-beginner.esy.es/
 
 ```Swift  
 import UIKit
-import AVFoundation     // Import AVFoundation to access speech fearure
+import MapKit           // Import MapKit to modify your MKMapKit
+import CoreLocation     // Import CoreLocation to access GPS
 
-class ViewController: UIViewController
-{
-    @IBOutlet var txtv: UITextView!
-    var synthesizer = AVSpeechSynthesizer()
+class ViewController: UIViewController {
 
+    @IBOutlet weak var map: MKMapView!
+    
+    let locationManager = CLLocationManager()
+    var isCentered = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()             // Required in order to access GPS coordinates
+        
+    }
+    
+    func centerMapOnLocation(coordinate: CLLocationCoordinate2D) {
+    
+        let latDelta:CLLocationDegrees = 0.01
+        let lonDelta:CLLocationDegrees = 0.01
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+        self.map.setRegion(region, animated: true)
+        
+    }
+    
+    @IBAction func mapTypeChanged(sender: UISegmentedControl) {
+    
+        switch (sender.selectedSegmentIndex) {
+        case 0:
+            map.mapType = MKMapType.standard
+        case 1:
+            map.mapType = MKMapType.hybrid
+        case 2:
+            map.mapType = MKMapType.satellite
+        default: break
+        }
+        
     }
 
-    @IBAction func tappedSpeech(_ sender: Any)
-    {
-        // Create contents
-        let contents = AVSpeechUtterance(string: txtv.text ?? "")
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
 
-        // Set language
-        contents.voice = AVSpeechSynthesisVoice(language: "en-US")
 
-        // Speak
-        synthesizer.speak(contents)
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if !isCentered {
+            self.centerMapOnLocation(coordinate: locations.first!.coordinate)
+            isCentered = true
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            map.showsUserLocation = true
+        default: 
+            locationManager.stopUpdatingLocation()
+            map.showsUserLocation = false
+        }
     }
 }
 ```
