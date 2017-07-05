@@ -80,7 +80,7 @@ http://ios-class-for-beginner.esy.es/
 
 ```Swift  
 import UIKit
-import MapKit           // Import MapKit to modify your MKMapKit
+import MapKit           // Import MapKit to modify your MKMapViw
 import CoreLocation     // Import CoreLocation to access GPS
 
 class ViewController: UIViewController {
