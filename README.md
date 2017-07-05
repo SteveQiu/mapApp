@@ -37,6 +37,10 @@ http://ios-class-for-beginner.esy.es/
 > </details>
 
 > 2-2. Add a <code>UISegmentControl</code> to your View Controller
+> <ul>
+>   <li>Increase the number of segments to 3</li>
+>   <li>Rename each segment to Map, Hybrid, and Satellite respectively</li>
+> </ul>
 > <details>
 >   <summary>View Gif</summary>
 >   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid2.gif?raw=true" /> >     </div>
