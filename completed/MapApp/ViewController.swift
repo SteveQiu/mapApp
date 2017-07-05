@@ -13,6 +13,7 @@ import CoreLocation
 class ViewController: UIViewController {
 
     @IBOutlet weak var map: MKMapView!
+    
     let locationManager = CLLocationManager()
     var isCentered = false
     
