@@ -33,19 +33,19 @@ http://ios-class-for-beginner.esy.es/
 > 2-1. Add a <code>MKMapView</code> to your View Controller
 > <details>
 >   <summary>View Gif</summary>
->   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid1.gif?raw=true" /> >     </div>
 > </details>
 
 > 2-2. Add a <code>UISegmentControl</code> to your View Controller
 > <details>
 >   <summary>View Gif</summary>
->   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid2.gif?raw=true" /> >     </div>
 > </details>
 
 > 2-3. Apply autoresizing for map and segment control
 > <details>
 >   <summary>View Gif</summary>
->   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/0.gif" /> >     </div>
+>   <div style="text-align:center"><img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid5.gif?raw=true" /> >     </div>
 > </details>
 
 
@@ -57,7 +57,7 @@ http://ios-class-for-beginner.esy.es/
 > <details>
 >   <summary>View Gif</summary>
 >   <div style="text-align:center">
->     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-1.gif" />
+>     <img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid3.gif?raw=true" />
 >   </div>
 >  </details>
 
@@ -65,7 +65,7 @@ http://ios-class-for-beginner.esy.es/
 > <details>
 >   <summary>View Gif</summary>
 >   <div style="text-align:center">
->     <img src ="https://github.com/iosClassForBeginner/speech-en/blob/master/resources/3-2.gif" />
+>     <img src ="https://github.com/iosClassForBeginner/mapApp/blob/master/vids/vid4.gif?raw=true" />
 >   </div>
 > </details>
 
